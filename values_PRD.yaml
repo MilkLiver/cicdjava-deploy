@@ -90,8 +90,10 @@ ingress:
       paths:
         - path: /
           backend:
-            serviceName: test-deploy-test
-            servicePort: 9527
+            service:
+              name: test-deploy-test
+              port:
+                number: 9527
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
