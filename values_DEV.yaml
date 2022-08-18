@@ -89,6 +89,7 @@ ingress:
     - host: cicd-ingress.deploy-test02
       paths:
         - path: /
+          pathType: Prefix
           backend:
             service:
               name: test-deploy-test
