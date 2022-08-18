@@ -33,8 +33,10 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: {{ $fullName }}
-              servicePort: {{ $svcPort }}
+              service:
+                name: {{ $fullName }}
+                port:
+                  number: {{ $svcPort }}
     {{- end }}
          
     {{- if .Values.ingress.customHostsEnabled }}
@@ -45,10 +47,13 @@ spec:
           {{- range .paths }}
           - path: {{ .path }}
             backend:
-              serviceName: {{ .backend.serviceName }}
-              servicePort: {{ .backend.servicePort }}
-              #serviceName: {{ $fullName }}
-              #servicePort: {{ $svcPort }}
+              service:
+                name: {{ .backend.service.name }}
+                port: 
+                  number: {{ .backend.service.port.number }}
+                #name: {{ $fullName }}
+                #port:
+                #  number: {{ $svcPort }}
           {{- end }}
     {{- end }}
     {{- end }}
