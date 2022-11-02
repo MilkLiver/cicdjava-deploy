@@ -8,7 +8,7 @@ image:
   repository: docker.io/milkliver/deploy-test
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v6.18.0-demo-app-2"
+  tag: "v6.18.0-demo-app-3"
   workingDir: /testfiles
   # command:
   #   [
