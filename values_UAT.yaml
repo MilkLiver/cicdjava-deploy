@@ -8,7 +8,7 @@ image:
   repository: docker.io/milkliver/deploy-test
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v6.19.2-demo-java-builder-b5hvb-deploy-test02-2"
+  tag: "v6.19.2-demo-java-builder-b2pmp-deploy-test-3"
   workingDir: /testfiles
   # command:
   #   [
